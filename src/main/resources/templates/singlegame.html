@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 th:text="${singleGame.gameTitle}"></h1>
+    <h2 th:text="'This game is available on: '+${singleGame.gamePlatforms}"></h2>
+
+    <ul th:each="hashtag:${singleGame.hashtags}">
+        <li th:text="${hashtag.hashtagName}"></li>
+    </ul>
+</body>
+</html>
